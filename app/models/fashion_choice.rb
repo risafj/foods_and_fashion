@@ -1,0 +1,2 @@
+class FashionChoice < ApplicationRecord
+end

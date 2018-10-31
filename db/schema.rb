@@ -10,14 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_064806) do
+ActiveRecord::Schema.define(version: 2018_10_31_112444) do
+
+  create_table "fashion_choices", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_fashion_choices_on_name", unique: true
+  end
+
+  create_table "food_choices", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_food_choices_on_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "fashion_choice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "food_choice"
     t.index ["name"], name: "index_users_on_name", unique: true
   end
 
