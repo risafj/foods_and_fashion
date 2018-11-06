@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  # skip_before_action runs before any of the other methods are called. Authentication always happens here.
   skip_before_action :verify_authenticity_token, only: :create
   def index
     # Placing "print" here will print to the terminal when this method is called - not to the view.
