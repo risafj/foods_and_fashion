@@ -26,6 +26,7 @@ class UsersController < ApplicationController
 
   private
   # Strong parameters
+  # Rails already knows what "params" means.
   # Checks if incoming requests' params meet your expectations.
   # The example below makes sure you have "user" in the top level of the json and returns everything in the level below it. Then, it lists the attributes that are permitted.
   def user_params

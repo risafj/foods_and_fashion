@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # The line below goes to "users" controller and calls the "index" method.
   get 'users/index'
   post 'users/create'
   get 'users/delete'
